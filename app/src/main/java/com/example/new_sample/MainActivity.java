@@ -157,7 +157,16 @@ public class MainActivity extends AppCompatActivity {
                         t2.setText((int) val1 + "%");
                     }
                     t1.setText(null);
-                } else {
+                } else if(val1 != Double.NaN){
+                    ACTION = MODULUS;
+                    if (!ifReallyDecimal()) {
+                        t2.setText(val1 + "%");
+                    } else {
+                        t2.setText((int) val1 + "%");
+                    }
+                    t1.setText(null);
+
+                }else {
                     t2.setText("Error");
                 }
             }
@@ -175,7 +184,16 @@ public class MainActivity extends AppCompatActivity {
                         t2.setText((int) val1 + "+");
                     }
                     t1.setText(null);
-                } else {
+                } else if(val1 != Double.NaN){
+                    ACTION = ADDITION;
+                    if (!ifReallyDecimal()) {
+                        t2.setText(val1 + "+");
+                    } else {
+                        t2.setText((int) val1 + "+");
+                    }
+                    t1.setText(null);
+
+                }else {
                     t2.setText("Error");
                 }
             }
@@ -194,7 +212,16 @@ public class MainActivity extends AppCompatActivity {
                             t2.setText((int) val1 + "-");
                         }
                     t1.setText(null);
-                } else {
+                } else if(val1 != Double.NaN){
+                    ACTION = SUBTRACTION;
+                    if (!ifReallyDecimal()) {
+                        t2.setText(val1 + "-");
+                    } else {
+                        t2.setText((int) val1 + "-");
+                    }
+                    t1.setText(null);
+
+                }else {
                     t2.setText("Error");
                 }
             }
@@ -212,7 +239,16 @@ public class MainActivity extends AppCompatActivity {
                         t2.setText((int) val1 + "×");
                     }
                     t1.setText(null);
-                } else {
+                }  else if(val1 != Double.NaN){
+                    ACTION = MULTIPLICATION;
+                    if (!ifReallyDecimal()) {
+                        t2.setText(val1 + "x");
+                    } else {
+                        t2.setText((int) val1 + "x");
+                    }
+                    t1.setText(null);
+
+                }else {
                     t2.setText("Error");
                 }
             }
@@ -230,7 +266,16 @@ public class MainActivity extends AppCompatActivity {
                         t2.setText(val1 + "/");
                     }
                     t1.setText(null);
-                } else {
+                } else if(val1 != Double.NaN){
+                    ACTION = DIVISION;
+                    if (!ifReallyDecimal()) {
+                        t2.setText(val1 + "/");
+                    } else {
+                        t2.setText((int) val1 + "/");
+                    }
+                    t1.setText(null);
+
+                }else {
                     t2.setText("Error");
                 }
             }
